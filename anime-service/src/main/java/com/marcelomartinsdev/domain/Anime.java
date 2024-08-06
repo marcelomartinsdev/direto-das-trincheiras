@@ -1,26 +1,22 @@
 package com.marcelomartinsdev.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.util.List;
 
 @Getter
+@AllArgsConstructor
 public class Anime {
-    private Long id;
     public String name;
-
-    public Anime(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
+    private Long id;
 
     public static List<Anime> animeList() {
-        var onePiece = new Anime(1L, "One Piece");
-        var moshukoTensei = new Anime(2L, "Moshuko Tensei");
-        var naruto = new Anime(3L, "Naruto");
+        var onePiece = new Anime("One Piece", 1L);
+        var moshukoTensei = new Anime("Moshuko Tensei", 2L);
+        var naruto = new Anime("Naruto", 3L);
 
         return List.of(onePiece, moshukoTensei, naruto);
     }
-
 }
 

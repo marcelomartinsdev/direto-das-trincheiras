@@ -28,10 +28,6 @@ public class AnimeController {
 
     @GetMapping("{id}")
     public Anime findById(@PathVariable Long id) {
-        return Anime.animeList()
-                .stream()
-                .filter(anime -> anime.getId().equals(id))
-                .findFirst()
-                .orElse(null);
+        return Anime.animeList().stream().filter(anime -> anime.getId().equals(id)).findFirst().orElse(null);
     }
 }
