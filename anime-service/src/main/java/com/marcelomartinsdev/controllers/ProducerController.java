@@ -53,7 +53,6 @@ public class ProducerController {
                 .name(producer.getName())
                 .createdAt(producer.getCreatedAt())
                 .build();
-z
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 }
